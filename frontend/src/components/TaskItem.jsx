@@ -10,7 +10,7 @@ const TaskItem = ({ item, task, settask }) => {
   const checkbox = async () => {
     try {
       const res = await axios.patch(
-        `http://localhost:3000/api/tasks/${item._id}`,
+        `https://taskmanager-angf.onrender.com/api/tasks/${item._id}`,
         {
           completed: !item.completed,
         },
@@ -25,7 +25,7 @@ const TaskItem = ({ item, task, settask }) => {
   // Delete task
   const del = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/tasks/${item._id}`);
+      await axios.delete(`https://taskmanager-angf.onrender.com/api/tasks/${item._id}`);
 
       settask(task.filter((t) => t._id !== item._id));
     } catch (error) {
@@ -43,7 +43,7 @@ const TaskItem = ({ item, task, settask }) => {
 
     try {
       const res = await axios.patch(
-        `http://localhost:3000/api/tasks/${item._id}`,
+        `https://taskmanager-angf.onrender.com/api/tasks/${item._id}`,
         {
           text: text,
         },

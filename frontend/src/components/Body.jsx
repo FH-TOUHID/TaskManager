@@ -9,7 +9,7 @@ const Body = () => {
   useEffect(() => {
     const gettask = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/tasks");
+        const res = await axios.get("https://taskmanager-angf.onrender.com/api/tasks");
         settask(res.data);
       } catch (error) {
         console.log(error);

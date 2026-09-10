@@ -10,7 +10,7 @@ const Form = ({ task, settask }) => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/tasks", data);
+      const res = await axios.post("https://taskmanager-angf.onrender.com/api/tasks", data);
       settask([...task, res.data]);
       reset();
     } catch (error) {
