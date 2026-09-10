@@ -8,8 +8,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://taskmanager-git-main-touhid-s-projects.vercel.app",
-      "https://taskmanager-a4v52u6gw-touhid-s-projects.vercel.app",
+      "https://taskmanager-zeta-lac.vercel.app",
     ],
   })
 );
